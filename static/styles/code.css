@@ -1,0 +1,21 @@
+:root {
+    --comment: #313244;
+    --keyword: #cba6f7;
+    --property: #cdd6f4;
+    --function: #74c7ec;
+    --fnproperty: #fab387;
+    --operator: #f38ba8;
+    --symbol: #45475a;
+    --string: #f9e2af;
+    --number: #cba6f7;
+}
+
+code  span.comment {color: var(--comment)}
+code  span.keyword {color: var(--keyword)}
+code  span.property {color: var(--property)}
+code  span.function {color: var(--function)}
+code  span.fnproperty {color: var(--fnproperty)}
+code  span.operator {color: var(--operator)}
+code  span.symbol {color: var(--symbol)}
+code  span.string {color: var(--string)}
+code  span.number {color: var(--number)}

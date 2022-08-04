@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UnitedCatdom</title>
+
+        <!-- ASSETS -->
+        <link rel="icon" href="./icon.png"> <!-- Favicon -->
+        <link rel="stylesheet" href="./style.css"> <!-- CSS -->
+        <script src="./script.mjs" type="module"></script> <!-- JS -->
+
+        <link rel="stylesheet" href="./styles/code.css"> <!-- CODE HIGHLIGHT -->
+        <!--  -->
+
+        <!-- SOCKET.IO -->
+        <script src="socket.io/socket.io.js"></script>
+        <script>
+            const socket = io();
+        </script>
+        <!--  -->
+    </head>
+
+    <body oncontextmenu="return false">
+        <div id="contextmenu" style="display: none"></div>
+
+        <header>
+            <button>UnitedCatdom | AMP Studio</button>
+        </header>
+
+        <div id="content">
+            <div id="index">
+                <img src="./icon.png" id="logo" draggable="false">
+                <span id="username">
+                    <code>
+                        <span class="keyword">const</span>
+                        <span class="property">UnitedCatdom</span>
+                        <span class="operator">=</span>
+                        <span class="keyword">new</span>
+                        <span class="function">Fox</span><span class="symbol">({<span class="fnproperty">type</span><span class="operator">=</span>"<span class="string">code</span>"});</span>
+                    </code><span>▌</span>
+                </span>
+                <div id="socials">
+                    <button id="discord"><img src="./images/services/discord.png" draggable="false"></button>
+                    <button id="instagram"><img src="./images/services/instagram.png" draggable="false"></button>
+                    <button id="spotify"><img src="./images/services/spotify.png" draggable="false"></button>
+                    <button id="youtube"><img src="./images/services/youtube.png" draggable="false"></button>
+                    <button id="twitter"><img src="./images/services/twitter.png" draggable="false"></button>
+                    <button id="github"><img src="./images/services/github.png" draggable="false"></button>
+                </div>
+                <iframe
+                    id="github_stats"
+                    oncontextmenu="return false"
+                    src="https://github-readme-stats.vercel.app/api?username=CuteBladeYT&count_private=true&show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000">
+                </iframe>
+            </div>
+
+        </div>
+        
+        <span id="copyrightInfo">2022 UnitedCatdom ©</span>
+    </body>
+</html>

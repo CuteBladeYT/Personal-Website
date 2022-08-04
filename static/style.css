@@ -1,0 +1,183 @@
+@font-face {
+    font-family: firacode;
+    src: url(./styles/firacode.ttf);
+}
+
+:root {
+    --header-height: 36px;
+    --site-height: calc(100vh - var(--header-height));
+
+    --primary-dark: #11111b;
+    --secondary-dark: #181825;
+    --accent-1: #a6e3a1;
+
+    --primary-dark-hover: rgba(var(--primary-dark), 0.4);
+    --secondary-dark-hover: rgba(var(--secondary-dark), 0.4);
+
+    --light-hover: rgba(255, 255, 255, 0.4);
+
+    --border-radius: 15px;
+    --border-1: 1px white solid;
+    --border-2: 2px white solid;
+    --border-3: 3px white solid;
+
+    --font-family: firacode;
+}
+
+body {
+    background: var(--primary-dark);
+    color: white;
+    overflow: hidden auto;
+}
+
+div#contextmenu {
+    position: fixed;
+    top: 200px;
+    left: 200px;
+    width: 30vw;
+    max-height: 40vh;
+    background: var(--secondary-dark);
+    border: var(--border-2);
+    border-radius: var(--border-radius);
+    contain: content;
+    overflow: hidden auto;
+    z-index: 9999999999999;
+}
+div#contextmenu > button {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 4px;
+    margin-bottom: 1px;
+    width: calc(100% - 8px);
+    background: var(--primary-dark);
+    border: var(--border-1);
+    color: white;
+    font-family: var(--font-family);
+    font-size: 24px;
+    cursor: pointer;
+}
+div#contextmenu > button:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+div#contextmenu > button:last-child {
+    margin-bottom: 4px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+div#contextmenu > button:hover {background: var(--primary-dark-hover)}
+
+span#copyrightInfo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 4px;
+    color: rgb(40, 41, 43);
+    font-family: var(--font-family);
+    font-size: 12px;
+}
+span#copyrightInfo:hover {
+    color: grey;
+}
+span#copyrightInfo::selection {
+    color: unset;
+    background: unset;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--header-height);
+    border-bottom: var(--border-3);
+    backdrop-filter: blur(2px);
+    z-index: 2;
+}
+header > button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 24px;
+}
+
+div#content {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100vw;
+    height: var(--site-height);
+    contain: content;
+    overflow: hidden auto;
+    z-index: 1;
+}
+
+div#content > div#index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+div#content > div#index > img#logo {
+    position: absolute;
+    top: 32px;
+    left: calc(50% - (256px / 2));
+    width: 256px;
+    height: 256px;
+    object-fit: contain;
+}
+div#content > div#index > span#username {
+    position: absolute;
+    top: calc(32px + 256px + 32px);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 30px
+}
+
+div#content > div#index > div#socials {
+    position: absolute;
+    left: 4px;
+    top: calc(var(--header-height));
+    height: calc(100vh - var(--header-height));
+    width: 64px;
+}
+div#content > div#index > div#socials > button {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: transparent;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+div#content > div#index > div#socials > button:hover {
+    background: var(--light-hover);
+}
+div#content > div#index > div#socials > button > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+div#content > div#index > iframe#github_stats {
+    position: absolute;
+    top: calc(32px + 256px + 32px + 30px + 32px);
+    left: calc(128px);
+    width: calc(100% - (128px * 2));
+    height: calc(412px);
+    border: none;
+}
